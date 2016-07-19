@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app= "Datos" >
+<head>
+<title>Angular ejercicio</title>
+
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="ejercicioAngular.js"></script></head>
+<body>
+<div ng-controller = "notasController"><!-- con form creamos un formulario-->
+	<form>
+		<p>Name <input type="text" name="name" ng-model="user.name"></p>
+		<p>Email <input type="email" name="email" ng-model="user.email"></p>
+		<p>Gener <input type="radio" name="radio" ng-model="user.genero" value="male">Male
+			 <input type="radio" name="radio" ng-model="user.genero" value="female">Female<br>
+			 <button ng-click="reset()">RESET</button>
+			 <button ng-click="update(user)">SAVE</button>
+	</form>
+		<pre>form = {{user | json}}</pre><!-- mostachos y con json ya incorporamos JSON-->
+		<pre>master = {{master | json}}</pre>
+</div>
+
+</body>
+</html>
